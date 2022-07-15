@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+}
+
+$bgColor: rgb(245, 185, 195);
+$fontColor: rgb(237, 212, 212);
+$fontSize: 1.2rem;
+$fontFamily: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+$navBgColor: #78b1be;
+$myBorder: 2px solid rgb(156, 91, 91);
+$myLinkSize: 1.1rem;
+$bannerBgColor: #b77395;
+
+body {
+    font-family: $fontFamily;
+    background-color: $bgColor;
+    color: $fontColor;
+    font-size: $fontSize;
+}
+
+header {
+    background-color: $navBgColor;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    img {
+        width: 80px;
+        border: $myBorder;
+        border-radius: 10px;
+    }
+   nav {
+       ul {
+           list-style-type: none;
+       }
+       li {
+          //içinde bulunduğumuz elementi refere etmek için & kullanılır
+           display: inline-block;
+           &:hover {
+               text-decoration: underline;
+           }
+       }
+       a {
+           color: $fontColor;
+           text-decoration: none;
+           padding: 0.5rem;
+       }
+   }
+}
+
+main {
+    .banner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: $bannerBgColor;
+        padding: 1rem;
+        line-height: 2rem;
+    }
+    button {
+        padding: 0.5rem;
+        background-color: $navBgColor;
+        border: none;
+        border-radius: 10px;
+        font-size: $myLinkSize;
+        width: 9rem;
+        margin-right: 0.5rem;
+        margin-top: 1.5rem;
+        &:hover{
+            background-color: $bgColor;
+            cursor: pointer;
+        }
+    }
+    img {
+        width: 30%;
+        min-width: 300px;
+        max-width: 400px;
+    }
+}
+
+@mixin myBox ($bgColor, $fontColor) {
+    background-color: $bgColor;
+    color: $fontColor;
+    width: 25%;
+    height: 15rem;
+    border: $myBorder;
+    border-radius: 5px;
+    margin: 0.5rem;
+}
+
+.cards {
+    padding: 1rem;
+    display: flex;
+    .card1 {
+        @include myBox(rgb(190, 100, 100), rgb(113, 81, 81))
+    }
+    .card2 {
+        @include myBox(rgb(127, 189, 127), rgb(173, 95, 108))
+    }
+    .card3 {
+        @include myBox(rgb(191, 230, 139), rgb(27, 57, 59))
+    }
+    .card4 {
+        @include myBox(rgb(114, 84, 102), rgb(141, 112, 117))
+    }
+}
+
+.articles {
+    display: flex;
+    padding: 1rem;
+    .article1 {
+        width: 50%;
+        background-color: rgb(117, 94, 94);
+        border: 1px solid black;
+        border-radius: 10px;
+        height: 10rem;
+        margin: 1rem;
+        padding: 0.5rem;
+    }
+    .article2 {
+        @extend .article1;
+        background-color: rgb(92, 124, 117);
+    }
+}
+
+$textColor: #b86b6b, #7d3c78, #6e9190, #3c3e6e, #5a674f;
+
+.footer {
+    color: #2e2f4b;
+    background-color: #7c7db0;
+    .socialIcons {
+        display: flex;
+        height: 7rem;
+        @for $i from 1 to 6 {  //5 yazarken dahil olması için through yazılabilir
+            .social#{$i}{
+                width: 20%;
+                height: 100%;
+                background-color: lighten(#412d44, $i*10); //darken yazarsak koyuya dogru gider.
+                color: nth($textColor, $i);
+                font-size: $i*1rem;
+            }
+        }
+    }
+}

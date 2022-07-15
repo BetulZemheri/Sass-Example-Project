@@ -1,0 +1,169 @@
+* {
+  margin: 0;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: rgb(245, 185, 195);
+  color: rgb(237, 212, 212);
+  font-size: 1.2rem;
+}
+
+header {
+  background-color: #78b1be;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+header img {
+  width: 80px;
+  border: 2px solid rgb(156, 91, 91);
+  border-radius: 10px;
+}
+header nav ul {
+  list-style-type: none;
+}
+header nav li {
+  display: inline-block;
+}
+header nav li:hover {
+  text-decoration: underline;
+}
+header nav a {
+  color: rgb(237, 212, 212);
+  text-decoration: none;
+  padding: 0.5rem;
+}
+
+main .banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #b77395;
+  padding: 1rem;
+  line-height: 2rem;
+}
+main button {
+  padding: 0.5rem;
+  background-color: #78b1be;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  width: 9rem;
+  margin-right: 0.5rem;
+  margin-top: 1.5rem;
+}
+main button:hover {
+  background-color: rgb(245, 185, 195);
+  cursor: pointer;
+}
+main img {
+  width: 30%;
+  min-width: 300px;
+  max-width: 400px;
+}
+
+.cards {
+  padding: 1rem;
+  display: flex;
+}
+.cards .card1 {
+  background-color: rgb(190, 100, 100);
+  color: white;
+  width: 25%;
+  height: 15rem;
+  border: 2px solid rgb(156, 91, 91);
+  border-radius: 5px;
+  margin: 0.5rem;
+}
+.cards .card2 {
+  background-color: rgb(127, 189, 127);
+  color: pink;
+  width: 25%;
+  height: 15rem;
+  border: 2px solid rgb(156, 91, 91);
+  border-radius: 5px;
+  margin: 0.5rem;
+}
+.cards .card3 {
+  background-color: rgb(191, 230, 139);
+  color: rgb(27, 57, 59);
+  width: 25%;
+  height: 15rem;
+  border: 2px solid rgb(156, 91, 91);
+  border-radius: 5px;
+  margin: 0.5rem;
+}
+.cards .card4 {
+  background-color: rgb(114, 84, 102);
+  color: rgb(141, 112, 117);
+  width: 25%;
+  height: 15rem;
+  border: 2px solid rgb(156, 91, 91);
+  border-radius: 5px;
+  margin: 0.5rem;
+}
+
+.articles {
+  display: flex;
+  padding: 1rem;
+}
+.articles .article1, .articles .article2 {
+  width: 50%;
+  background-color: rgb(117, 94, 94);
+  border: 1px solid black;
+  border-radius: 10px;
+  height: 10rem;
+  margin: 1rem;
+  padding: 0.5rem;
+}
+.articles .article2 {
+  background-color: rgb(92, 124, 117);
+}
+
+.footer {
+  color: #2e2f4b;
+  background-color: #7c7db0;
+}
+.footer .socialIcons {
+  display: flex;
+  height: 7rem;
+}
+.footer .socialIcons .social1 {
+  width: 20%;
+  height: 100%;
+  background-color: #5e4163;
+  color: #b86b6b;
+  font-size: 1rem;
+}
+.footer .socialIcons .social2 {
+  width: 20%;
+  height: 100%;
+  background-color: #7c5681;
+  color: #7d3c78;
+  font-size: 2rem;
+}
+.footer .socialIcons .social3 {
+  width: 20%;
+  height: 100%;
+  background-color: #976c9e;
+  color: #6e9190;
+  font-size: 3rem;
+}
+.footer .socialIcons .social4 {
+  width: 20%;
+  height: 100%;
+  background-color: #ad8bb2;
+  color: #3c3e6e;
+  font-size: 4rem;
+}
+.footer .socialIcons .social5 {
+  width: 20%;
+  height: 100%;
+  background-color: #c3aac6;
+  color: #5a674f;
+  font-size: 5rem;
+}
+
+/*# sourceMappingURL=style.css.map */
